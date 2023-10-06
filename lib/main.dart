@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:project_uts/SplashScreen/splah_screen.dart';
+import 'package:project_uts/SplashScreen/splash_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+
   runApp(
     MyApp(
       child: MaterialApp(
-        title: 'Bonceng',
+        title: 'ceng3',
         theme: ThemeData(
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
           useMaterial3: true,

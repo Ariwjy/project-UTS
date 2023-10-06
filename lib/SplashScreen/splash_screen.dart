@@ -1,7 +1,9 @@
 import "dart:async";
 
 import "package:flutter/material.dart";
-import "package:project_uts/mainScreens/main_screen.dart";
+import 'package:project_uts/authentication/login.dart';
+import 'package:project_uts/authentication/signup.dart';
+import 'package:project_uts/Screen/main_screen.dart';
 
 class MySpalshScreen extends StatefulWidget {
   const MySpalshScreen({super.key});
@@ -14,7 +16,7 @@ class _MySpalshScreenState extends State<MySpalshScreen> {
   startTimer() {
     Timer(const Duration(seconds: 3), () async {
       //send user to main screen
-      Navigator.push(context, MaterialPageRoute(builder: (c) => MainScreen()));
+      Navigator.push(context, MaterialPageRoute(builder: (c) => LoginScreen()));
     });
   }
 
@@ -39,7 +41,7 @@ class _MySpalshScreenState extends State<MySpalshScreen> {
                 height: 10,
               ),
               const Text(
-                "Taxi dan ojek app",
+                "Zaman sekarang masih cape nyetir sendiri? Bonceng-in aja",
                 style: TextStyle(
                     fontSize: 24,
                     color: Colors.white,
