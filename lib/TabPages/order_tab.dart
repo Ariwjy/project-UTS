@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:project_uts/SplashScreen/TerimaKasih.dart';
-import 'package:project_uts/SplashScreen/TerimaKasih.dart';
 import 'package:project_uts/Data/lokasi.dart';
 import 'package:project_uts/TabPages/harga_tab.dart';
 import 'package:project_uts/TabPages/pesanan_selesai.dart';
