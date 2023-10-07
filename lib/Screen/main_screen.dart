@@ -1,7 +1,7 @@
 import "package:flutter/material.dart";
 import 'package:project_uts/TabPages/cuaca/cuaca_tab.dart';
-import 'package:project_uts/TabPages/others_tab.dart';
-import 'package:project_uts/TabPages/others_tab.dart';
+import 'package:project_uts/TabPages/order_history.dart';
+import 'package:project_uts/TabPages/order_history.dart';
 import 'package:project_uts/TabPages/home_tab.dart';
 import 'package:project_uts/profile/profile_tab.dart';
 
@@ -35,10 +35,9 @@ class _MainScreenState extends State<MainScreen>
       body: TabBarView(
         physics: const NeverScrollableScrollPhysics(),
         controller: tabController,
-        children: const [
+        children: [
           HomeTabPage(),
-          OthersTabPage(),
-          CuacaTabPage(),
+          OrderHistoryPage(),
           ProfileTabPage(),
         ],
       ),
@@ -51,10 +50,6 @@ class _MainScreenState extends State<MainScreen>
           BottomNavigationBarItem(
             icon: Icon(Icons.credit_card),
             label: "Others",
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.umbrella),
-            label: "Cuaca",
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.person),

@@ -96,7 +96,7 @@ class _HargaTabPageState extends State<HargaTabPage> {
               ),
             ),
             ListTile(
-              title: const Text('Bonceng Pay'),
+              title: const Text('CengPay'),
               leading: Radio(
                 value: 'Bonceng',
                 groupValue: selectedPayment,
@@ -128,7 +128,7 @@ class _HargaTabPageState extends State<HargaTabPage> {
                     } else {
                       ScaffoldMessenger.of(context).showSnackBar(
                         SnackBar(
-                          content: Text('Saldo Bonceng Pay tidak mencukupi.'),
+                          content: Text('Saldo CengPay anda tidak mencukupi.'),
                         ),
                       );
                       return;
@@ -138,8 +138,9 @@ class _HargaTabPageState extends State<HargaTabPage> {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) =>
-                          FindingDriver(selectedPrice: selectedPrice),
+                      builder: (context) => FindingDriver(
+                        selectedPrice: selectedPrice,
+                      ),
                     ),
                   );
                 }

@@ -58,7 +58,10 @@ class _SignUpScreenState extends State<SignUpScreen> {
               ),
               Padding(
                 padding: const EdgeInsets.all(15.0),
-                child: Image.asset("Images/logo1.png"),
+                child: Image.asset(
+                  "Images/bonceng.jpg",
+                  width: 400,
+                ),
               ),
               const SizedBox(
                 height: 10,
@@ -99,7 +102,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 style: const TextStyle(color: Colors.grey),
                 decoration: const InputDecoration(
                   labelText: "Email",
-                  hintText: "Email",
+                  hintText: "Email@gmail.com",
                   enabledBorder: UnderlineInputBorder(
                     borderSide: BorderSide(color: Colors.grey),
                   ),
@@ -223,15 +226,18 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 height: 15,
               ),
               ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  primary: Colors.lightGreenAccent,
+                ),
                 child: const Text(
                   "Buat akun",
-                  style: TextStyle(color: Colors.grey),
+                  style: TextStyle(color: Colors.black),
                 ),
                 onPressed: isSignUpButtonEnabled
                     ? () {
                         if (passwordText.text == CpasswordText.text) {
                           // Password dan Confirm Password sama
-                          UserData.username1 = usernameText.text;
+                          UserData.username = usernameText.text;
                           UserData.email = emailText.text;
                           Navigator.push(context,
                               MaterialPageRoute(builder: (c) => MainScreen()));

@@ -3,6 +3,7 @@ import 'package:project_uts/SplashScreen/TerimaKasih.dart';
 import 'package:project_uts/SplashScreen/TerimaKasih.dart';
 import 'package:project_uts/Data/lokasi.dart';
 import 'package:project_uts/TabPages/harga_tab.dart';
+import 'package:project_uts/TabPages/pesanan_selesai.dart';
 
 class OrderTabPage extends StatefulWidget {
   final String? pickupLocation;
@@ -24,9 +25,13 @@ class OrderTabPage extends StatefulWidget {
 
 class _OrderTabPageState extends State<OrderTabPage> {
   String? selectedPayment;
+  get selectedPrice => widget.selectedPrice;
 
   @override
   Widget build(BuildContext context) {
+    String? pickupLocation = widget.pickupLocation;
+    String? dropOffLocation = widget.dropOffLocation;
+
     return Scaffold(
       appBar: AppBar(
         title: Text('Order'),
@@ -42,7 +47,7 @@ class _OrderTabPageState extends State<OrderTabPage> {
             ),
             SizedBox(height: 5.0),
             Text(
-              '${Lokasi.TitikJemput}',
+              'Titik Jemput: $pickupLocation',
               style: TextStyle(fontSize: 16.0),
             ),
             SizedBox(height: 20.0),
@@ -52,7 +57,7 @@ class _OrderTabPageState extends State<OrderTabPage> {
             ),
             SizedBox(height: 5.0),
             Text(
-              '${Lokasi.TitikAntar}',
+              'Titik Antar: $dropOffLocation',
               style: TextStyle(fontSize: 16.0),
             ),
             SizedBox(height: 20.0),
@@ -96,7 +101,12 @@ class _OrderTabPageState extends State<OrderTabPage> {
                       // Navigasi ke halaman PesananSelesai
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => TerimaKasih()),
+                        MaterialPageRoute(
+                            builder: (context) => PesananSelesai(
+                                  pickupLocation: pickupLocation,
+                                  dropOffLocation: dropOffLocation,
+                                  selectedPrice: selectedPrice,
+                                )),
                       );
                     },
                     child: Text('Pesanan Selesai'),

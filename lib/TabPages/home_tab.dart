@@ -159,14 +159,14 @@ class _HomeTabPageState extends State<HomeTabPage> {
         if (snapshot.connectionState == ConnectionState.done) {
           return Scaffold(
             appBar: AppBar(
-              title: Text('Hello! ${UserData.username} ${UserData.username1}'),
+              title: Text('Hello! ${UserData.username}'),
               actions: [
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 16.0),
                   child: Row(
                     children: [
                       Text(
-                        'Bonceng Pay: Rp $saldo',
+                        'CengPay: Rp $saldo',
                         style: TextStyle(fontSize: 16.0),
                       ),
                       IconButton(
@@ -260,7 +260,7 @@ class _HomeTabPageState extends State<HomeTabPage> {
         } else {
           return Scaffold(
             appBar: AppBar(
-              title: Text('Hello! ${UserData.username} ${UserData.username1}'),
+              title: Text('Hello! ${UserData.username}'),
               actions: [
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 16.0),
