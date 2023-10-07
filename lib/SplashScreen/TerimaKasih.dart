@@ -4,12 +4,12 @@ import "package:project_uts/Data/order.dart";
 import 'package:project_uts/Screen/main_screen.dart';
 import 'package:project_uts/TabPages/home_tab.dart';
 
-class PesananSelesai extends StatefulWidget {
+class TerimaKasih extends StatefulWidget {
   @override
-  State<PesananSelesai> createState() => _PesananSelesaiState();
+  State<TerimaKasih> createState() => _TerimaKasihState();
 }
 
-class _PesananSelesaiState extends State<PesananSelesai> {
+class _TerimaKasihState extends State<TerimaKasih> {
   @override
   void initState() {
     super.initState();
@@ -31,7 +31,7 @@ class _PesananSelesaiState extends State<PesananSelesai> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              LottieBuilder.asset('asset/animation3.json'),
+              LottieBuilder.asset('asset/animation3.json', repeat: true),
               SizedBox(height: 20.0),
               Text(
                 'Terima Kasih sudah menggunakan jasa kami!!',

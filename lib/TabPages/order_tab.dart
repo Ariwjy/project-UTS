@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:project_uts/SplashScreen/pesanan_selesai.dart';
+import 'package:project_uts/SplashScreen/TerimaKasih.dart';
+import 'package:project_uts/SplashScreen/TerimaKasih.dart';
 import 'package:project_uts/Data/lokasi.dart';
 import 'package:project_uts/TabPages/harga_tab.dart';
 
@@ -95,8 +96,7 @@ class _OrderTabPageState extends State<OrderTabPage> {
                       // Navigasi ke halaman PesananSelesai
                       Navigator.push(
                         context,
-                        MaterialPageRoute(
-                            builder: (context) => PesananSelesai()),
+                        MaterialPageRoute(builder: (context) => TerimaKasih()),
                       );
                     },
                     child: Text('Pesanan Selesai'),

@@ -7,7 +7,7 @@ void main() async {
   runApp(
     MyApp(
       child: MaterialApp(
-        title: 'ceng3',
+        title: 'Bonceng',
         theme: ThemeData(
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
           useMaterial3: true,

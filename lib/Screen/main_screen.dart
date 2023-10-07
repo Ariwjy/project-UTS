@@ -1,4 +1,5 @@
 import "package:flutter/material.dart";
+import 'package:project_uts/TabPages/cuaca/cuaca_tab.dart';
 import 'package:project_uts/TabPages/others_tab.dart';
 import 'package:project_uts/TabPages/others_tab.dart';
 import 'package:project_uts/TabPages/home_tab.dart';
@@ -37,6 +38,7 @@ class _MainScreenState extends State<MainScreen>
         children: const [
           HomeTabPage(),
           OthersTabPage(),
+          CuacaTabPage(),
           ProfileTabPage(),
         ],
       ),
@@ -49,6 +51,10 @@ class _MainScreenState extends State<MainScreen>
           BottomNavigationBarItem(
             icon: Icon(Icons.credit_card),
             label: "Others",
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.umbrella),
+            label: "Cuaca",
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.person),

@@ -23,12 +23,6 @@ class _HomeTabPageState extends State<HomeTabPage> {
   double saldo = 0.0;
   TextEditingController topUpController = TextEditingController();
 
-  final List<String> images = [
-    'assets/image1.jpg',
-    'assets/image2.jpg',
-    'assets/image3.jpg',
-  ];
-
   Future<DecorationImage> _loadBackgroundImage() async {
     ByteData data = await rootBundle.load('Images/background_home.jpg');
     List<int> bytes = data.buffer.asUint8List();
@@ -256,7 +250,7 @@ class _HomeTabPageState extends State<HomeTabPage> {
                       ),
                       SizedBox(height: 20.0),
                       LottieBuilder.asset('asset/animation2.json',
-                          repeat: true),
+                          width: 200, repeat: true),
                     ],
                   ),
                 ),

@@ -43,7 +43,7 @@ class _FindingDriverState extends State<FindingDriver> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              LottieBuilder.asset('asset/animation.json'),
+              LottieBuilder.asset('asset/finding_driver.json'),
               SizedBox(height: 20.0),
               Text(
                 'Sedang mencari driver...',

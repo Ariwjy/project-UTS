@@ -232,6 +232,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                         if (passwordText.text == CpasswordText.text) {
                           // Password dan Confirm Password sama
                           UserData.username1 = usernameText.text;
+                          UserData.email = emailText.text;
                           Navigator.push(context,
                               MaterialPageRoute(builder: (c) => MainScreen()));
                         } else {
