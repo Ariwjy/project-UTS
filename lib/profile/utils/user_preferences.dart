@@ -7,6 +7,6 @@ class UserPreferences {
     name: '${UserData.username}',
     email: '${UserData.email}',
     nohp: '${UserData.nohp}',
-    about: 'Saya sudah tiga tahun menggunakan Bonceng!',
+    about: 'Jl. Pramuka No. 48 Blok B4 No.18 (Pagar Warna Kuning)',
   );
 }

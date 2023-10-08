@@ -18,17 +18,20 @@ class FindingDriver extends StatefulWidget {
 class _FindingDriverState extends State<FindingDriver> {
   get selectedPrice => widget.selectedPrice;
 
+  get pickupLocation => pickupLocation;
+  get dropOffLocation => dropOffLocation;
+
   @override
   void initState() {
     super.initState();
-    // Tambahkan penundaan selama 5 detik sebelum pindah ke OrderTabPage
     Future.delayed(Duration(seconds: 5), () {
       Navigator.pushReplacement(
         context,
         MaterialPageRoute(
-            builder: (context) => OrderTabPage(
-                  selectedPrice: selectedPrice,
-                )),
+          builder: (context) => OrderTabPage(
+            selectedPrice: selectedPrice,
+          ),
+        ),
       );
     });
   }

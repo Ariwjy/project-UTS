@@ -40,25 +40,6 @@ class _OrderTabPageState extends State<OrderTabPage> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(
-              'Titik Jemput:',
-              style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
-            ),
-            SizedBox(height: 5.0),
-            Text(
-              'Titik Jemput: $pickupLocation',
-              style: TextStyle(fontSize: 16.0),
-            ),
-            SizedBox(height: 20.0),
-            Text(
-              'Titik Antar:',
-              style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
-            ),
-            SizedBox(height: 5.0),
-            Text(
-              'Titik Antar: $dropOffLocation',
-              style: TextStyle(fontSize: 16.0),
-            ),
             SizedBox(height: 20.0),
             Center(
               child: Column(
@@ -102,8 +83,6 @@ class _OrderTabPageState extends State<OrderTabPage> {
                         context,
                         MaterialPageRoute(
                             builder: (context) => PesananSelesai(
-                                  pickupLocation: pickupLocation,
-                                  dropOffLocation: dropOffLocation,
                                   selectedPrice: selectedPrice,
                                 )),
                       );

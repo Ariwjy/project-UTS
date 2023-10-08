@@ -31,25 +31,8 @@ class OrderHistoryPage extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
                 Text(
-                  'Tanggal           : ${orders[index].date}',
+                  'Detail Pesanan',
                 ),
-                Text(
-                  'Titik Jemput   : ${orders[index].pickupLocation}',
-                ),
-                Text(
-                  'Titik Antar       : ${orders[index].destination}',
-                ),
-                Text(
-                  'Nama Driver   : ${orders[index].driverName}',
-                ),
-                Text(
-                  'Jenis               : ${orders[index].jeniskendaraan}',
-                ),
-                Text(
-                  'No.Plat            : ${orders[index].noplat}',
-                ),
-                Text(
-                    'Harga              : \Rp.${orders[index].price.toStringAsFixed(2)}'),
               ],
             ),
             onTap: () {
@@ -142,12 +125,21 @@ final List<Order> orders = [
   Order(
     orderNumber: 1,
     date: '07 Oktober 2023',
-    pickupLocation: 'Jl. Contoh 1',
-    destination: 'Jl. Tujuan 1',
+    pickupLocation: 'Jl. Jelambar, wijaya Kusuma',
+    destination: 'Poris Paradise 2 Blok B3 No.18',
     driverName: 'Joko',
     jeniskendaraan: 'Motor',
     noplat: 'B 123 IDP',
     price: 35000.0,
   ),
-  // Tambahkan pesanan lain di sini
+  Order(
+    orderNumber: 2,
+    date: '08 Oktober 2023',
+    pickupLocation: 'Jl. Daan Mogot Raya',
+    destination: 'Tanggerang',
+    driverName: 'Joko',
+    jeniskendaraan: 'Mobil',
+    noplat: 'B 123 IDP',
+    price: 45000.0,
+  ),
 ];

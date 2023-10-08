@@ -1,3 +1,4 @@
+import 'package:project_uts/SplashScreen/splash_screen.dart';
 import 'package:project_uts/authentication/login.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:flutter/cupertino.dart';
@@ -6,7 +7,6 @@ import 'package:project_uts/profile/model/user.dart';
 import 'package:project_uts/profile/utils/user_preferences.dart';
 import 'package:project_uts/profile/widgets/appbar_widget.dart';
 import 'package:project_uts/profile/widgets/button_widget.dart';
-import 'package:project_uts/profile/widgets/numbers_widget.dart';
 import 'package:project_uts/profile/widgets/profile_widget.dart';
 
 class ProfileTabPage extends StatefulWidget {
@@ -43,49 +43,35 @@ class _ProfileTabPageState extends State<ProfileTabPage> {
 
     return Scaffold(
       appBar: buildAppBar(context),
-      body: Stack(
+      body: ListView(
+        physics: BouncingScrollPhysics(),
         children: [
-          // Gambar latar belakang
-          Container(
-            decoration: BoxDecoration(
-              image: DecorationImage(
-                image: AssetImage('Images/background_home.jpg'),
-                fit: BoxFit.cover,
-              ),
-            ),
+          const SizedBox(height: 24),
+          ProfileWidget(
+            imagePath: user.imagePath,
+            onClicked: () async {},
           ),
-          ListView(
-            physics: BouncingScrollPhysics(),
-            children: [
-              const SizedBox(height: 24),
-              ProfileWidget(
-                imagePath: user.imagePath,
-                onClicked: () async {},
-              ),
-              const SizedBox(height: 24),
-              buildName(user),
-              const SizedBox(height: 26),
-              // NumbersWidget(),
-              const SizedBox(height: 24),
-              Center(
-                child: Column(
-                  children: [
-                    Text(
-                      'Address',
-                      style:
-                          TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
-                    ),
-                    Center(
-                        child: SizedBox(
-                      width: 300,
-                      child: buildEditableAbout(),
-                    )),
-                    const SizedBox(height: 24),
-                    buildUpgradeButton(),
-                  ],
+          const SizedBox(height: 24),
+          buildName(user),
+          const SizedBox(height: 26),
+          const SizedBox(height: 24),
+          Center(
+            child: Column(
+              children: [
+                Text(
+                  'Address',
+                  style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
                 ),
-              ),
-            ],
+                Center(
+                  child: SizedBox(
+                    width: 300,
+                    child: buildEditableAbout(),
+                  ),
+                ),
+                const SizedBox(height: 24),
+                buildUpgradeButton(),
+              ],
+            ),
           ),
         ],
       ),
@@ -130,7 +116,7 @@ class _ProfileTabPageState extends State<ProfileTabPage> {
         onClicked: () {
           Navigator.push(
             context,
-            MaterialPageRoute(builder: (c) => LoginScreen()),
+            MaterialPageRoute(builder: (c) => MySpalshScreen()),
           );
         },
       );

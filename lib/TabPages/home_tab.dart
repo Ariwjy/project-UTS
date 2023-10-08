@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 import 'package:project_uts/SplashScreen/finding_driver.dart';
+import 'package:project_uts/TabPages/notifications.dart';
 import 'package:project_uts/data/lokasi.dart';
 import 'package:project_uts/data/user_data.dart';
 import 'package:flutter/services.dart' show ByteData, Uint8List, rootBundle;
@@ -196,14 +197,17 @@ class _HomeTabPageState extends State<HomeTabPage> {
                           ),
                           IconButton(
                             icon: Icon(Icons.comment),
-                            onPressed: () {
-                              // Add the functionality for the comment button here
-                            },
+                            onPressed: () {},
                           ),
                           IconButton(
                             icon: Icon(Icons.notifications),
                             onPressed: () {
-                              // Add the functionality for the bell button here
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) =>
+                                        NotificationTabPage()),
+                              );
                             },
                           ),
                         ],
