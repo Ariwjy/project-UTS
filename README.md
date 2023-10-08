@@ -1,8 +1,12 @@
 # project_uts
 George Wielianto/535220090
+
 Ari Wijaya/535220060
+
 Rafel Sutra Dharma/535220071
+
 Michael/535220261
+
 Firzi Ilham Bagusti/535220260
 
 Deskripsi Video:
