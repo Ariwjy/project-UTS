@@ -9,6 +9,7 @@ Deskripsi Video:
 Di dalam Video Youtube yang kami berikan, kamu menjelaskan bagaimana caranya menggunakan aplikasi yang sudah kami buat dan kembangkan. Dan di dalam aplikasi tersebut kami juga menambahkan fitur-fitur yang akan berguna untuk para user. Seperti CengPay dimana fitur ini dapat memudahkan para User untuk melakukan transaksi dengan cara TopUp di dalam aplikasi kami.
 
 Judul PDF : Online Transportation Bonceng
+
 Jumlah Halaman PDF: 48
 
 
