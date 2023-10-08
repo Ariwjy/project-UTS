@@ -14,7 +14,7 @@ Di dalam Video Youtube yang kami berikan, kamu menjelaskan bagaimana caranya men
 
 Judul PDF : Online Transportation Bonceng
 
-Jumlah Halaman PDF: 48
+Jumlah Halaman PDF: 16
 
 
 
